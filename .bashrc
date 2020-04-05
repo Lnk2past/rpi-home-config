@@ -59,7 +59,11 @@ alias la='ls -A'
 alias l='ls -CF'
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_envs ]; then
+    source ~/.bash_envs
 fi
 
 if ! shopt -oq posix; then
